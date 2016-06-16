@@ -1,0 +1,20 @@
+{
+  "name": "react-native-swiss-knife",
+  "version": "0.0.0",
+  "description": "Implementation of Missing APIs in React-Native",
+  "directories": {
+    "android": "android",
+    "ios": "ios",
+    "lib": "lib"
+  },
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-component"
+  ],
+  "author": "Ali Najafizadeh",
+  "license": "MIT"
+}
