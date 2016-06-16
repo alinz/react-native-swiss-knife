@@ -1,5 +1,5 @@
 <p align="center">
-    <img src ="logo.png" />
+    <img src ="https://raw.githubusercontent.com/alinz/react-native-swiss-knife/master/logo.png" />
 </p>
 
 # React Native Swiss Knife
