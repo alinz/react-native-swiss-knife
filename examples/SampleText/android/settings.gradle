@@ -2,5 +2,7 @@ rootProject.name = 'SampleText'
 
 include ':app'
 include ':react-native-swiss-knife'
+project(':react-native-swiss-knife').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-swiss-knife/android')
+include ':react-native-swiss-knife'
 
 project(':react-native-swiss-knife').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-swiss-knife/modules/text/android')
