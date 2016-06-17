@@ -13,7 +13,7 @@ import {
   NativeModules
 } from 'react-native';
 
-import * as RNSK from 'react-native-swiss-knife'
+import { RNSKText } from 'react-native-swiss-knife'
 
 class SampleText extends Component {
   constructor(props, context) {
@@ -25,7 +25,7 @@ class SampleText extends Component {
   }
 
   async componentDidMount() {
-    const size = await RNSK.Text.calcSize("Hello", "Helvetica", 40)
+    const size = await RNSKText.calcSize("Hello", "Helvetica", 40)
     this.setState({ size })
   }
 

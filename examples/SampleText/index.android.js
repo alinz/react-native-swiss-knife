@@ -9,21 +9,33 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules
 } from 'react-native';
 
+import { RNSKText } from 'react-native-swiss-knife'
+
 class SampleText extends Component {
+  constructor(props, context) {
+    super(props, context)
+
+    this.state = {
+      size: { width: 0, height: 0 }
+    }
+  }
+
+  async componentDidMount() {
+    const size = await RNSKText.calcSize("Hello", "Helvetica", 40)
+    this.setState({ size })
+  }
+
   render() {
+    const { size } = this.state
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
+          size is {JSON.stringify(size)}
         </Text>
       </View>
     );
