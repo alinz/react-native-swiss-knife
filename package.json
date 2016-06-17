@@ -1,6 +1,6 @@
 {
   "name": "react-native-swiss-knife",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Implementation of Missing APIs in React-Native",
   "directories": {
     "android": "android",
