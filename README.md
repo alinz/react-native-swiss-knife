@@ -4,11 +4,11 @@
 
 # React Native Swiss Knife
 
-This project is created to fill the gap of missing common APIs in react-native. Every native and JS code separated by modules so You don't have to put all the modules into your project in order to use only one.
+This project is created to fill the gap of missing common APIs in react-native.
 
-## The Truth
+## Reasons
 
-It's kind of suck that for any small modules I have to create a repo and then find a name that hopefully not taken by another dude. If you feel the pain, then help me fix this. I'm working on the clock to make this module fully functional with `rnpm`. at the moment you should do it manually.
+It's kind of suck that for any small modules I have to create a repo and then find a name that hopefully not taken by another developer. If you feel the pain, then help me fix this by just gathering all the small focused native modules.
 
 ## Contribution
 
