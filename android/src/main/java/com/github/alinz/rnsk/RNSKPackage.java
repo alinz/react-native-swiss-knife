@@ -6,6 +6,7 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.github.alinz.rnsk.text.TextModule;
+import com.github.alinz.rnsk.bucket.BucketModule;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +19,8 @@ public class RNSKPackage implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
 
         modules.add(new TextModule(reactContext));
-
+        modules.add(new BucketModule(reactContext));
+        
         return modules;
     }
 
