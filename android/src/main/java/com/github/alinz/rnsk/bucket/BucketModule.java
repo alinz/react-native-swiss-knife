@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReactMethod;
 public class BucketModule extends ReactContextBaseJavaModule {
     ReactApplicationContext context;
 
-    public BucketModule(ReactApplicationContext reactApplicationContext, Activity activity) {
+    public BucketModule(ReactApplicationContext reactApplicationContext) {
         super(reactApplicationContext);
         this.context = reactApplicationContext;
     }
