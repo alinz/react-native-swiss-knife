@@ -28,6 +28,11 @@ RCT_EXPORT_METHOD(get:(NSString *) key
 {
   NSUserDefaults* bucket = [self bucketByName: bucketName];
   id value = [bucket objectForKey:key];
+
+  if (value == nil) {
+    value = [NSNull null];
+  }
+
   callback(@[value]);
 }
 
