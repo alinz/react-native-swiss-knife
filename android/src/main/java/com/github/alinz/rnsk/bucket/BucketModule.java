@@ -34,7 +34,7 @@ public class BucketModule extends ReactContextBaseJavaModule {
         if (value != null) {
             callback.invoke(value.toString());
         } else {
-            callback.invoke(null);
+            callback.invoke();
         }
     }
 
