@@ -20,13 +20,8 @@ public class RNSKPackage implements ReactPackage {
 
         modules.add(new TextModule(reactContext));
         modules.add(new BucketModule(reactContext));
-        
-        return modules;
-    }
 
-    @Override
-    public List<Class<? extends JavaScriptModule>> createJSModules() {
-        return Collections.emptyList();
+        return modules;
     }
 
     @Override
