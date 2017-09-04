@@ -20,7 +20,7 @@ public class RNSKPackage implements ReactPackage {
 
         modules.add(new TextModule(reactContext));
         modules.add(new BucketModule(reactContext));
-        
+
         return modules;
     }
 
