@@ -21,7 +21,7 @@ RCT_EXPORT_METHOD(set:(NSString *) key
   NSUserDefaults* bucket = [self bucketByName: bucketName];
   [bucket setObject:value forKey:key];
   [bucket synchronize];
-  callback(@[NSNull null]);
+  callback(NULL);
 }
 
 RCT_EXPORT_METHOD(get:(NSString *) key
@@ -45,7 +45,7 @@ RCT_EXPORT_METHOD(remove:(NSString *) key
   NSUserDefaults* bucket = [self bucketByName: bucketName];
   [bucket removeObjectForKey: key];
   [bucket synchronize];
-  callback(@[NSNull null]);
+  callback(NULL);
 }
 
 @end
