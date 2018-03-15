@@ -15,11 +15,13 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(set:(NSString *) key
                   value:(NSString *) value
-                  bucketName:(NSString*) bucketName)
+                  bucketName:(NSString*) bucketName
+                  callback:(RCTResponseSenderBlock)callback)
 {
   NSUserDefaults* bucket = [self bucketByName: bucketName];
   [bucket setObject:value forKey:key];
   [bucket synchronize];
+  callback(NULL);
 }
 
 RCT_EXPORT_METHOD(get:(NSString *) key
@@ -37,11 +39,13 @@ RCT_EXPORT_METHOD(get:(NSString *) key
 }
 
 RCT_EXPORT_METHOD(remove:(NSString *) key
-                  bucketName:(NSString*) bucketName)
+                  bucketName:(NSString*) bucketName
+                  callback:(RCTResponseSenderBlock)callback)
 {
   NSUserDefaults* bucket = [self bucketByName: bucketName];
   [bucket removeObjectForKey: key];
   [bucket synchronize];
+  callback(NULL);
 }
 
 @end

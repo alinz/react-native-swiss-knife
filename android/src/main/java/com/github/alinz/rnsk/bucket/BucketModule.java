@@ -39,20 +39,22 @@ public class BucketModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void set(String key, String value, String bucketName) {
+    public void set(String key, String value, String bucketName, Callback callback) {
         SharedPreferences preferences = getBucket(bucketName);
 
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, value);
         editor.commit();
+        callback.invoke();
     }
 
     @ReactMethod
-    public void remove(String key, String bucketName) {
+    public void remove(String key, String bucketName, Callback callback) {
         SharedPreferences preferences = getBucket(bucketName);
 
         SharedPreferences.Editor editor = preferences.edit();
         editor.remove(key);
         editor.commit();
+        callback.invoke();
     }
 }
