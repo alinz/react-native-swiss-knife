@@ -13,8 +13,17 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(set:(NSString *) key
+RCT_EXPORT_METHOD(setString:(NSString *) key
                   value:(NSString *) value
+                  bucketName:(NSString*) bucketName)
+{
+  NSUserDefaults* bucket = [self bucketByName: bucketName];
+  [bucket setObject:value forKey:key];
+  [bucket synchronize];
+}
+
+RCT_EXPORT_METHOD(setDictionary:(NSString *) key
+                  value:(NSDictionary *) value
                   bucketName:(NSString*) bucketName)
 {
   NSUserDefaults* bucket = [self bucketByName: bucketName];
